@@ -2,9 +2,9 @@ import asyncio
 import os
 import sys
 
-if not os.environ('DEVICE_ID') and \
-        not os.environ('ACCOUNT_ID') and \
-        not os.environ('SECRET'):
+if not os.environ.get('DEVICE_ID') and \
+        not os.environ.get('ACCOUNT_ID') and \
+        not os.environ.get('SECRET'):
     print("Please paste your device auths into the \"env\" file.\n")
     sys.exit()
 
@@ -16,9 +16,9 @@ os.system('clear')
 import klldFN
 
 client = klldFN.klldFN(
-  device_id=os.environ['DEVICE_ID'],  
-  account_id=os.environ['ACCOUNT_ID'],
-  secret=os.environ['SECRET']
+  device_id=os.environ.get['DEVICE_ID'],  
+  account_id=os.environ.get['ACCOUNT_ID'],
+  secret=os.environ.get['SECRET']
 )
 
 
