@@ -2,7 +2,7 @@ import asyncio
 import os
 import sys
 
-if not os.environ.get('DEVICE_ID') and \
+if not os.environ('DEVICE_ID') and \
         not os.environ('ACCOUNT_ID') and \
         not os.environ('SECRET'):
     print("Please paste your device auths into the \"env\" file.\n")
